@@ -26,12 +26,11 @@
                 <p>Nazwa: {{ product.name }}</p>
                 <p>Autor: {{ product.author }}</p>
                 <p>Cena: {{ product.price }}</p>
-                <form action="{{ path('add_to_cart', {'id': product.id}) }}">
+                <form action="{{ path('add_to_cart', {'id': product.id}) }}" method="post">
                     <label for="quantity"></label>
-                    <input id="quantity" type="number" value="1">
+                    <input id="quantity" name="quantity" type="number" value="1">
                     <div class="button_container">
                         <button type="submit" class="add_to_cart_btn">Dodaj do koszyka</button>
-                        {#                    <a href="{{ path('add_to_cart', {'id': product.id}) }}" class="add_to_cart_btn">Dodaj do koszyka</a> #}
                     </div>
                 </form>
             </div>

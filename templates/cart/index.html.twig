@@ -3,7 +3,9 @@
 {% block title %}Hello CartController!{% endblock %}
 
 {% block body %}
+
     {% for book in cart %}
-        <p>{{ book.name }}</p>
+        {{ book.name }}
+        {{ quantity[book.id] }}
     {% endfor %}
 {% endblock %}
