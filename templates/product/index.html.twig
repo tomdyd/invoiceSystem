@@ -25,7 +25,7 @@
             <div id="{{ product.id }}" class="book">
                 <p>Nazwa: {{ product.name }}</p>
                 <p>Autor: {{ product.author }}</p>
-                <p>Cena: {{ product.price }}</p>
+                <p>Cena: {{ product.price }} zł</p>
                 <form action="{{ path('add_to_cart', {'id': product.id}) }}" method="post">
                     <label for="quantity"></label>
                     <input id="quantity" name="quantity" type="number" value="1">

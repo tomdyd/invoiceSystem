@@ -3,9 +3,20 @@
 {% block title %}Hello CartController!{% endblock %}
 
 {% block body %}
-
-    {% for book in cart %}
-        {{ book.name }}
-        {{ quantity[book.id] }}
-    {% endfor %}
+    <div>
+        <h1>Twój koszyk zawiera:</h1>
+        {% for book in cart %}
+            <div class="product">
+                <div>
+                    <p>Tytuł: {{ book.name }}</p>
+                    <p>Artykuł: {{ book.author }}</p>
+                    <p>Ilość (szt.): {{ quantity[book.id] }}</p>
+                    <p>Cena: {{ quantity[book.id] * book.price }} zł</p>
+                </div>
+                    <a class="cart_btn">
+                        <i class="fa-solid fa-trash"></i>
+                    </a>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}

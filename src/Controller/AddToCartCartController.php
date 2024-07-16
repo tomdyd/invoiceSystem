@@ -21,7 +21,7 @@ class AddToCartCartController extends AbstractController
 
         $cart[$book->getId()] = $book;
 
-        if(isset($quantityArray))
+        if(isset($quantityArray[$book->getId()]))
         {
             $quantityArray[$book->getId()] += $quantity;
         }

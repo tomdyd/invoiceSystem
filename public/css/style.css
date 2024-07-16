@@ -3,6 +3,11 @@
     margin: 0;
 }
 
+h1{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
 p{
     font-size: 1.6rem;
     line-height: 2rem;
@@ -79,4 +84,16 @@ a{
 
 .fa-cart-shopping:hover{
     color: #aaa;
+}
+
+.product{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    width: 50rem;
+}
+
+.fa-trash{
+    font-size: 3rem;
+    cursor: pointer;
 }
