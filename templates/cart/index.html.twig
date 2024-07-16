@@ -3,20 +3,32 @@
 {% block title %}Hello CartController!{% endblock %}
 
 {% block body %}
-    <div>
+    <div class="cart">
         <h1>Twój koszyk zawiera:</h1>
         {% for book in cart %}
             <div class="product">
-                <div>
+                <div class="article">
                     <p>Tytuł: {{ book.name }}</p>
                     <p>Artykuł: {{ book.author }}</p>
                     <p>Ilość (szt.): {{ quantity[book.id] }}</p>
                     <p>Cena: {{ quantity[book.id] * book.price }} zł</p>
                 </div>
-                    <a class="cart_btn">
-                        <i class="fa-solid fa-trash"></i>
-                    </a>
+                <a class="cart_btn" id="{{ book.id }}" href="{{ path('app_remove_from_cart', {'id': book.id}) }}">
+                    <i class="fa-solid fa-trash"></i>
+                </a>
             </div>
         {% endfor %}
+
+        {% set total = 0 %}
+        {% for book in cart %}
+            {% set total = total + quantity[book.id] * book.price %}
+        {% endfor %}
+
+        <div class="price_section">
+            <h2>Łączna kwota netto: {{ total }} zł</h2>
+            <h2>Łączna kwota brutto: {{ total * 1.23 }} zł</h2>
+            {{ form(form)}}
+        </div>
     </div>
+
 {% endblock %}

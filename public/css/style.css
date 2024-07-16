@@ -8,6 +8,13 @@ h1{
     margin-bottom: 1rem;
 }
 
+h2{
+    display: flex;
+    align-self: flex-start;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
 p{
     font-size: 1.6rem;
     line-height: 2rem;
@@ -16,6 +23,10 @@ p{
 a{
     text-decoration: none;
     color: #000;
+}
+
+.price{
+    height: 2rem;
 }
 
 .content{
@@ -61,9 +72,6 @@ a{
 
 .alert_success{
     width: calc(100% + 4rem);
-    position: fixed;
-    top: 0;
-    left: 0;
     height: 10rem;
     background-color: #000;
     color: #fff;
@@ -86,14 +94,56 @@ a{
     color: #aaa;
 }
 
+.cart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .product{
     display: flex;
     gap: 2rem;
     align-items: center;
-    width: 50rem;
+    padding: 0 1rem;
+
+    border: 0.1rem solid #000;
+    margin-bottom: 1rem;
 }
+
+.article{
+    width:30rem;
+}
+
 
 .fa-trash{
     font-size: 3rem;
     cursor: pointer;
+}
+
+.order_btn{
+    background-color: transparent;
+    color: #000;
+}
+
+.order_btn:hover{
+    background-color: #bbb;
+}
+
+.form-control{
+    font-size: 1.6rem;
+    color: #000;
+    height: 2.5rem;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.center-block{
+    display: block;
+    margin: 1rem auto 0 auto;
+    text-align: center;
+}
+
+label{
+    font-size: 1.6rem;
 }
